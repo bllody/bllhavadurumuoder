@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hava Durumu App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- FAVORİ DROPDOWN -->
+  <div id="favorite-wrapper">
+    <div id="favorite-toggle" onclick="toggleFavorites()">⭐ Favoriler</div>
+    <div id="favorites" class="hidden"></div>
+  </div>
+
+  <!-- VİDEO -->
+  <video autoplay muted loop id="bg-video">
+    <source src="clear.mp4" type="video/mp4" />
+    Tarayıcın video desteklemiyor.
+  </video>
+
+  <!-- ANA UYGULAMA -->
+  <div class="container">
+    <h1>Hava Durumu</h1>
+    <input type="text" id="cityInput" placeholder="Şehir gir..." />
+    <button onclick="getWeather()">Getir</button>
+    <button onclick="addFavorite()">⭐ Favorilere Ekle</button>
+    <div id="weatherResult"></div>
+    <div id="forecast"></div>
+  </div>
+
+  <script src="java.js"></script>
+</body>
+</html>
